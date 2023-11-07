@@ -10,8 +10,9 @@ int main(int argc, char **argv)
     printf("Error: Requires one argument\n");
     exit(1);
   }
-    int secs = (int)argv[1][0]-'0';
-  if(sleep(secs)!=0)
+  char *ticks_str = argv[1];
+  unsigned int ticks = atoi(ticks_str);
+  if(sleep(ticks)!=0)
   return 1;
 
 
