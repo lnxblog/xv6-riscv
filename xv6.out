@@ -4,9 +4,14 @@ xv6 kernel is booting
 hart 1 starting
 hart 2 starting
 init: starting sh
-$ pingpong
-4: received ping
-3: received pong
-$ echo OK
-OK
-$ qemu-system-riscv64: terminating on signal 15 from pid 20661 (make)
+$ mkdir 3y6Fa2Cj
+$ echo > 3y6Fa2Cj/t8P67pEg
+$ mkdir 3y6Fa2Cj/OtAOdMrw
+$ echo > 3y6Fa2Cj/OtAOdMrw/t8P67pEg
+$ mkdir rxhoKX37
+$ echo > rxhoKX37/t8P67pEg
+$ find . t8P67pEg
+./3y6Fa2Cj/t8P67pEg
+./3y6Fa2Cj/OtAOdMrw/t8P67pEg
+./rxhoKX37/t8P67pEg
+$ qemu-system-riscv64: terminating on signal 15 from pid 17161 (make)

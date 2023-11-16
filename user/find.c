@@ -36,13 +36,13 @@ void find(char *path, char *filename)
     char buf[512], *p;
     int fd;
     char *curr_file;
-
+    //printf("checking in %s for %s\n",path,filename);
     curr_file = fmtname(path);
 
-    //printf("checking in %s for %s\n",path,filename);
+    //
     if(!strcmp(filename,curr_file))
     {
-      printf("found %s \n", path);
+      printf("%s\n", path);
     }
 
 
@@ -68,6 +68,7 @@ void find(char *path, char *filename)
           *p++ = '/';
 
           while(read(fd, &de, sizeof(de)) == sizeof(de)){
+
             if(de.inum == 0)
                 continue;
           
@@ -76,8 +77,9 @@ void find(char *path, char *filename)
 
 
             memmove(p, de.name, DIRSIZ);
+            //printf("next path %s\n",p);
             p[DIRSIZ] = 0;
-            find(p,filename);
+            find(buf,filename);
 
           }
           break;
